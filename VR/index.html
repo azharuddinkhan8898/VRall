@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="js/aframe.min.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/javascript.js"></script>
+  <script src="js/aframe-text-geometry-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <!-- <a-asset-item" id="wall" src="img/wall.jpg"></a-asset-item>
+      <a-asset-item" id="object" src="img/petronas_obj/petronas.obj"></a-asset-item">
+      <a-asset-item" id="material" src="img/petronas_obj/petronas.mtl"></a-asset-item">
+      <a-asset-item" id="object1" src="img/obj/floor/Bevel Floor.obj"></a-asset-item">
+      <a-asset-item" id="material1" src="img/obj/floor/Bevel Floor.mtl"></a-asset-item">
+      <a-asset-item" id="object2" src="img/obj/pms/evs.obj"></a-asset-item">
+      <a-asset-item" id="material2" src="img/obj/pms/evs.mtl"></a-asset-item">
+      <a-asset-item" id="font" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item"> -->
+      <a-asset-item id="store1" src="img/obj/stores/crtshsp1.obj"></a-asset-item>
+      <a-asset-item id="store1mtl" src="img/obj/stores/crtshsp1.mtl"></a-asset-item>
+      <a-asset-item id="store2" src="img/obj/stores/crtshsp2.obj"></a-asset-item>
+      <a-asset-item id="store2mtl" src="img/obj/stores/crtshsp2.mtl"></a-asset-item>
+      <img id="groundTexture" src="img/floor.jpg">
+      <a-asset-item id="sky" src="img/sky1.jpg"></a-asset-item>
+      <a-asset-item id="barrel" src="img/obj/barrels/barrels_edited.obj"></a-asset-item>
+      <a-asset-item id="barrelptrn1" src="img/obj/barrels/11724-v8.jpg"></a-asset-item>
+      <a-asset-item id="woodbox" src="img/obj/woodenBox/untitled.obj"></a-asset-item>
+      <a-asset-item id="woodboxmtl1" src="img/obj/woodenBox/WoodPlanksDirty0008_L.jpg"></a-asset-item>
+      <a-asset-item id="woodboxmtl2" src="img/obj/woodenBox/3968.png"></a-asset-item>
+      <a-asset-item id="food-stall" src="img/obj/2 stores/model.dae"></a-asset-item>
+      <a-asset-item id="store3" src="img/obj/store2/model.dae"></a-asset-item>
+    </a-assets>
+    <!-- <a-box src="#wall" rotation="0 0 0" position="0 1 -5" width="1" height="2" depth="1">
+      <a-animation begin="mouseenter" attribute="rotation" to="0 360 0"></a-animation>
+    </a-box>
+     -->
+    <!-- <a-obj-model src="#object1" position="0 0 -5" scale="20 20 20" mtl="#material1"></a-obj-model> -->
+    <!-- <a-obj-model src="#object2" position="0 0 0"  mtl="#material2"></a-obj-model> -->
+    <a-obj-model id="clothes" src="#store1" mtl="#store1mtl" rotation="0 180 0" position="4 1.22 23">
+    	
+    </a-obj-model>
+    <a-obj-model src="#store2" mtl="#store2mtl" rotation="0 0 0" position="-4 1.22 23"></a-obj-model>
+    <a-obj-model src="#store1" mtl="#store1mtl" rotation="0 0 0" position="-4 1.22 13"></a-obj-model>
+    <a-obj-model src="#store2" mtl="#store2mtl" rotation="0 180 0" position="4 1.22 11"></a-obj-model>
+    <a-obj-model id="woodenBox" src="#woodbox" material="src:#woodboxmtl1" position="0 0.42 16.27" scale="1 1 1">
+    	<a-animation dur="500" begin="mouseenter" attribute="rotation" to="0 360 0"></a-animation>
+    </a-obj-model>
+    <a-obj-model id="barrel" src="#barrel" material="src:#barrelptrn1" position="1.73 0.31 18.84" scale="0.2 0.2 0.2"></a-obj-model>
+    <!-- <a-entity collada-model="#food-stall" position="-4.33 0.04 -0.63" scale="1 1 1" rotation="0 -90 0"></a-entity> -->
+    <a-entity collada-model="#store3" position="6 0 6.37" rotation="0 180 0"></a-entity>
+    <a-text text="value:SHOPPING; width:100;" position="-11.51 8.43 -24.91"></a-text>
+    <a-text visible="false" id="clotheText" text="value:CLOTHES; width:15;" position="1.94 1.90 18.61" rotation="0 270 0"></a-text>
+    <!-- <a-entity class="text" visible="true" text-geometry="value:CLOTHES; font:#font; width:5" position="0.3 1.10 -3.87" material="color:#ffffff;">
+    </a-entity> -->
+    <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
+    <a-camera class="camera1" position="0 0 25" look-controls="reverseMouseDrag:true">
+      <a-cursor color="#ffffff"></a-cursor> 
+    </a-camera>
+    <a-light type="hemisphere" color="#ffffff" position="0 18 0"></a-light>
+    <a-sky src="#sky" radius="30" theta-length="90"></a-sky>
+  </a-scene>
+</body>
+
+</html>

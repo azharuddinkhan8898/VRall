@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="js/aframe.js"></script>
+  <script src="js/AnaglyphEffect.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/javascript.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <a-asset-item src="imgs/floor.jpg" id="floor"></a-asset-item>
+      <img src="imgs/sky.jpg" id="sky"></img>
+    </a-assets>
+    <a-light type="hemisphere" color="#ffffff" position="0 15 0"></a-light>
+    <a-camera class="camera1" position="0 2.5 0" rotation="0 0 0">
+      <a-cursor color="#000000"></a-cursor>
+    </a-camera>
+    <!-- <a-cylinder id="ground" radius="30" src="#floor" position="0 0 0" height="0.1"></a-cylinder> -->
+    <a-sky src="#sky" radius="30"></a-sky>
+    <a-entity class="sphere_div" position="0 5 0">
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>

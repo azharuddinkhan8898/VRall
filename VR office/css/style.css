@@ -1,0 +1,11 @@
+.mainpopup {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 200px;
+  width: 200px;
+  border: 1px solid;
+  z-index: 10;
+  background: #000000;
+  opacity: 0.6;
+}

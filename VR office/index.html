@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="js/aframe.min.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/javascript.js"></script>
+  <script src="js/aframe-text-geometry-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@^3.2.0/dist/aframe-animation-component.min.js"></script>
+  <script src="js/ui-modal.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+	<!-- <div class="mainpopup"></div> -->
+  <a-scene>
+    <a-assets>
+     <img id="groundTexture" src="imgs/floor.jpg">
+      <a-asset-item id="sky" src="imgs/sky1.jpg"></a-asset-item>
+    	<a-asset-item id="officeObj" src="imgs/obj/office.obj"></a-asset-item>
+    	<a-asset-item id="officeMtl" src="imgs/obj/office.mtl"></a-asset-item>
+    	<a-asset-item id="trophy" src="imgs/obj/trophy.obj"></a-asset-item>
+    	<a-asset-item id="trophyMtl" src="imgs/obj/trophy.mtl"></a-asset-item>
+    	<a-asset-item id="certificate" src="imgs/obj/certificate.obj"></a-asset-item>
+    	<a-asset-item id="certificateMtl" src="imgs/obj/certificate.mtl"></a-asset-item>
+    	<a-asset-item id="files" src="imgs/obj/files.obj"></a-asset-item>
+    	<a-asset-item id="filesMtl" src="imgs/obj/files.mtl"></a-asset-item>
+    </a-assets>
+    <a-obj-model src="#officeObj" mtl="#officeMtl" position="0 0.7 0" scale="0.4 0.4 0.4"></a-obj-model>
+    <a-obj-model id="trophyID" src="#trophy" mtl="#trophyMtl" position="-0.69 2.58 -3.25" scale="0.4 0.4 0.4">
+    	
+    </a-obj-model>
+    
+    <a-plane id="trophy-plane" visible="true" width="2" height="1.5" scale='0 0 0' color="#34495e" position="-0.34 1.93 -1.93" rotation="0 45 0">
+    	<a-circle id="close_btn1" radius="0.1" color="#34495e" position="0.95 0.68 0.02" text="value:x; color:#ffffff; width:4; align:center" sound="src:url(audio/closebtn.mp3); on:mouseleave; volume:5;">
+    		<a-entity visible="false" text="value:Stare for 2 seconds to close; color:#000000; width:2.5; align:left" position="-0.19 0.14 0"></a-entity>
+    	</a-circle>
+    </a-plane>
+    
+    <a-obj-model src="#certificate" mtl="#certificateMtl" position="-2.88 3.79 3.06" scale="0.4 0.4 0.4">
+    	<a-animation begin="mouseenter" attribute="scale" dur="500" fill="forwards" to="1.2 1.2 1.2"></a-animation>
+    	<a-animation begin="mouseenter" attribute="position" dur="500" fill="forwards" to="-0.5 3.79 3.06"></a-animation>
+    	<a-animation begin="mouseleave" attribute="scale" dur="500" fill="forwards" to="0.4 0.4 0.4"></a-animation>
+    	<a-animation begin="mouseleave" attribute="position" dur="500" fill="forwards" to="-2.88 3.79 3.06"></a-animation>
+    </a-obj-model>
+    <a-obj-model src="#files" mtl="#filesMtl" position="-1.23 1.27 -0.64" scale="0.4 0.4 0.4"></a-obj-model>
+    <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
+    <a-camera class="camera1" position="2.44 0.5 0.97" rotation="-6.65 90.87 0" look-controls="reverseMouseDrag:true">
+      <a-cursor color="#ffffff"></a-cursor> 
+    </a-camera>
+    <a-entity id="maintext" look-at="a-camera" text="value: Look for the Trophy in this room; align:center; width:4; side:double; color:#000000; " position="0 2.34 0.97" rotation="0 90 0"></a-entity>
+    <a-light type="point" color="#ffffff" position="2.44 2.14 0.97"></a-light>
+    <a-sky src="#sky" radius="30" theta-length="90"></a-sky>
+  </a-scene>
+</body>
+
+</html>

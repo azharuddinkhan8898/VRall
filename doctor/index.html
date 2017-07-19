@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="js/aframe.min.js"></script>
+  <script src="js/aframe-text-geometry-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@^3.2.0/dist/aframe-animation-component.min.js"></script>
+  <!-- <script src="js/ui-modal.js"></script> -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://rawgit.com/blairmacintyre/aframe-look-at-billboard-component/master/dist/aframe-look-at-billboard-component.min.js"></script>
+  <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+  <script src="js/drag.js"></script>
+  <script src="js/physics.js"></script>
+  <!-- <script src="https://unpkg.com/aframe-click-drag-component"></script> -->
+  <script src="js/javascript.js"></script>
+<!--   <script>
+  registerAframeClickDragComponent(window.AFRAME);
+  </script> -->
+  <!-- <script src="js/particle.js"></script> -->
+</head>
+
+<body>
+  <div class="startbtn">
+    <div class="startVR">
+      <p>Start VR</p>
+    </div>
+  </div>
+  <a-scene>
+    <a-assets>
+      <img id="groundTexture" src="imgs/floor.jpg">
+      <a-asset-item id="sky" src="imgs/sky1.jpg"></a-asset-item>
+    </a-assets>
+    <a-cylinder src="#groundTexture" radius="50" color="#ef3024" position="0 -2 0" height="0.1"></a-cylinder>
+    <a-camera camera="userHeight:1.63" class="camera1" rotation="0 0 0" zoom="1">
+    </a-camera>
+    <a-sky src="sky" radius="50"></a-sky>
+    <a-light id="light1" type="point" color="#ffffff" position="0 1.1 0" visible="true"></a-light>
+  </a-scene>
+</body>
+
+</html>
